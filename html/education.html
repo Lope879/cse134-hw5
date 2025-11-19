@@ -6,6 +6,7 @@
     <title>Education Page</title>
     <link rel="shortcut icon" href="\assets\images\favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/main.css" type="text/css">
+    <script src="/javascript/main.js"></script> 
 </head>
 <body>
     <header>
@@ -16,17 +17,17 @@
                         Home
                     </li>
                 </a>
-                <a href="/html/portfolio.html">
+                <a id="portfolio-button" href="/html/portfolio.html">
                     <li>
                         Portfolio
                     </li>
                 </a>
-                <a href="/html/about-me.html">
+                <a id="aboutMe-button" href="/html/about-me.html">
                     <li>
                         About Me
                     </li>
                 </a>
-                <a href="/html/contact.html">
+                <a id="contact-button" href="/html/contact.html">
                     <li>
                         Contact
                     </li>
@@ -61,7 +62,8 @@
         </article>
     </main>
     <footer>
-
+        <button id="theme-toggle">🌙 Dark Mode</button> 
+        <noscript>This button doesn't work without Javascript.</noscript>
     </footer>
 </body>
 </html>

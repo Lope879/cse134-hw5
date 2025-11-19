@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="shortcut icon" href="\assets\images\favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
+    <script src="/javascript/form.js"></script>
+</head>
+<body id="form-body">
+    <header>
+    </header>
+    <main>
+        <h1>Example Form-With-JS Website Page</h1>
+
+        <form method="get" action="https://httpbin.org/get">
+            <div class="form-container">
+                <fieldset class="jsForm">
+                    <legend>Fill Out This Quick Form!</legend>
+
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fName" name="fname" required placeholder="ex: Jane" minlength="1" maxlength="20" pattern="[A-Za-z]*">
+            
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lName" name="lname" required placeholder="ex: Doe" minlength="1" maxlength="20" pattern="[A-Za-z]*">
+                
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="sEmail" required placeholder="ex: janedoe@gmail.com" minlength="1" maxlength="40">
+                    
+                    <label for="comment">Comments:</label>
+                    <textarea name="comment" id="sComment" placeholder="Write your comments here..." maxlength="200" required minlength="1"></textarea>
+                    <comment-counter>200 Characters Remaining</comment-counter>
+
+                    <input type="hidden" name="possible_bot" value="true">
+                    <input id="submit-button" type="submit">
+
+                    <output class="error" id="error" name="error"></output>
+                    <output class="info" id="info" name="info"></output>
+                </fieldset>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <button id="theme-toggle">🌙 Dark Mode</button> 
+        <noscript>This button doesn't work without Javascript.</noscript>
+    </footer>
+</body>
+</html>

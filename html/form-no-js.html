@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="shortcut icon" href="\assets\images\favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
+</head>
+<body id="form-body">
+    <header>
+    </header>
+    <main>
+        <h1>Example Form-No-JS Website Page</h1>
+        <!--
+        <form method="post" action="https://httpbin.org/post">
+            <fieldset>
+                <legend>Or Fill Out This Quick Form!</legend>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" required placeholder="ex: Jane">
+                <br><br>
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" required placeholder="ex: Doe">
+                <br><br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required placeholder="ex: janedoe@gmail.com">
+                <br><br>
+                <label for="comment">Comments:</label>
+                <textarea name="comment" id="comment" placeholder="Write your comments here..." max="200" required></textarea>
+                <br><br>
+                <input type="hidden" name="possible_bot" value="true">
+                <input type="submit">
+            </fieldset>
+        </form>
+    -->
+
+        <form method="get" action="https://httpbin.org/get">
+            <div class="form-container">
+                <fieldset class="jsForm">
+                    <legend>Fill Out This Quick Form!</legend>
+
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" required placeholder="ex: Jane" minlength="1" maxlength="20" pattern="[A-Za-z]*">
+                    <output class="error" name="fname-error"></output>
+                    <output class="info" name="fname-info"></output>
+            
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname" required placeholder="ex: Doe" minlength="1" maxlength="20" pattern="[A-Za-z]*">
+                    <output class="error" name="lname-error"></output>
+                    <output class="info" name="lname-info"></output>
+                
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required placeholder="ex: janedoe@gmail.com" minlength="1" maxlength="40">
+                    <output class="error" name="email-error"></output>
+                    <output class="info" name="email-info"></output>
+                    
+                    <label for="comment">Comments:</label>
+                    <textarea name="comment" id="comment" placeholder="Write your comments here..." max="200" required minlength="1"></textarea>
+                    <output class="error" name="comment-error"></output>
+                    <output class="info" name="comment-info"></output>
+
+                    <input type="hidden" name="possible_bot" value="true">
+                    <input id="submit-button" type="submit">
+                </fieldset>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <button id="theme-toggle">🌙 Dark Mode</button> 
+        <noscript>This button doesn't work without Javascript.</noscript>
+    </footer>
+</body>
+</html>

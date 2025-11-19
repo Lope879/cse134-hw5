@@ -6,14 +6,7 @@
     <title>Home Page</title>
     <link rel="shortcut icon" href="\assets\images\favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/main.css" type="text/css">
-    <style>
-        -nav {
-            border: 5px;
-            border-style: dotted;
-        }
-
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-    </style>                     <!--  Create a style for elements  -->
+    <script src="/javascript/main.js"></script>              
 </head>
 <body>
     <header>
@@ -24,17 +17,17 @@
                         Home
                     </li>
                 </a>
-                <a href="/html/portfolio.html">
+                <a id="portfolio-button" href="/html/portfolio.html">
                     <li>
                         Portfolio
                     </li>
                 </a>
-                <a href="/html/about-me.html">
+                <a id="aboutMe-button" href="/html/about-me.html">
                     <li>
                         About Me
                     </li>
                 </a>
-                <a href="/html/contact.html">
+                <a id="contact-button" href="/html/contact.html">
                     <li>
                         Contact
                     </li>
@@ -60,10 +53,14 @@
         </hgroup>
         <details>
             <summary>What Am I Doing Now</summary>
-            <p>Implementing CSS on my portfolio website after working on the HTML base.</p>
+            <p>Implementing JS and view transitions on my portfolio website after working on the CSS base.</p>
         </details>
         </div>
     </main>
+    <footer>
+        <button id="theme-toggle">🌙 Dark Mode</button> 
+        <noscript>This button doesn't work without Javascript.</noscript>
+    </footer>
     <noscript>
         <p>You have Javascript disabled or are using a browser that does not support Javascript.</p>
     </noscript>
