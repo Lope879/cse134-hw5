@@ -19,6 +19,9 @@
     --li-bg: #090;
     --portfolio-button-bg: orange;
     --details-hover-color: orange;
+    --link-colors-not-nav: purple;
+    --form-label-color: #222222;
+    --form-legend-color: #222222;
 }
 
 body.dark {
@@ -37,6 +40,9 @@ body.dark {
     --li-bg: #fff;
     --portfolio-button-bg: #fff;
     --details-hover-color: gray;
+    --link-colors-not-nav: skyblue;
+    --form-label-color: #e0e0e0;
+    --form-legend-color: #e0e0e0;
 }
 
 ::target-text {
@@ -143,6 +149,10 @@ header {
     }
 }
 
+a:not(nav a) {
+    color: var(--link-colors-not-nav);
+}
+
 @media (max-width: 405px) {
     .nav-list {
         flex-direction: column;
@@ -208,6 +218,10 @@ details:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+
+    a {
+        color: var(--link-colors-not-nav);
+    }
 }
 
 @media (max-width: 1000px) {
@@ -260,6 +274,14 @@ form {
     background-color: var(--form-bg);
     color: var(--form-text);
     transition: background-color 0.3s, color 0.3s;
+
+    legend {
+        color: var(--form-legend-color);
+    }
+
+    label {
+        color: var(--form-label-color);
+    }
 
     .form-container {
         background-color: white;  
