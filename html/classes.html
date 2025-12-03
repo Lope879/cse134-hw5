@@ -40,6 +40,7 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <hgroup>
             <h1>Cesar's Notable Classes at UCSD</h1>
@@ -47,13 +48,38 @@
                 my programming career as well as others that have sparked my interest.
             </p>
         </hgroup>
-        <div id="catalog">
+
+        <div id="load-buttons">
+            <button id="load-local">Load Local</button>
+            <button id="load-remote">Load Remote</button>
         </div>
+
+        <div id="catalog">
+            <class-card>
+                <div class="class-card">
+                    <hgroup>
+                        <p>CSE 110</p>
+                        <h2>Software Engineering</h2>
+                        <a href="https://catalog.ucsd.edu/courses/CSE.html#CSE+110:~:text=CSE%20110.%20Software,as%20space%20permits.">Course Info</a>
+                    </hgroup>
+                    <picture>
+                        <source media="(min-width: 500px)" srcset="\assets\images\software-engineering-small.png">
+                        <img src="\assets\images\software-engineering-smaller.png" alt="CSE 110 Class Image">
+                    </picture>
+                    <p class="class-note">This class introduced me to group project management, the languages of web development,
+                        and the software development lifecycle.</p>
+                </div>
+            </class-card>
+        </div>
+        <script type="module" src="/javascript/class-component.js"></script>
+
     </main>
+
     <footer>
         <button id="theme-toggle">🌙 Dark Mode</button> 
         <noscript>This button doesn't work without Javascript.</noscript>
     </footer>
+
     <noscript>
         <p>You have Javascript disabled or are using a browser that does not support Javascript.</p>
     </noscript>

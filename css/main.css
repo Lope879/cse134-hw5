@@ -12,7 +12,7 @@
     --form-text: #222222;
     --input-bg: #ffffff;
     --input-text: #222222;
-    --button-bg: # ;
+    --button-bg: #1E90FF;
     --button-text: #ffffff;
     --info-color: gray;
     --error-color: #ff3333;
@@ -22,6 +22,11 @@
     --link-colors-not-nav: purple;
     --form-label-color: #222222;
     --form-legend-color: #222222;
+    --catalog-bg-color: white;
+    --catalog-border: 1px solid black;
+    --class-card-border: 1px solid black;
+    --class-card-border-radius: 18px;
+    --class-card-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 body.dark {
@@ -43,6 +48,54 @@ body.dark {
     --link-colors-not-nav : skyblue;
     --form-label-color: #e0e0e0;
     --form-legend-color: #e0e0e0;
+    --catalog-bg-color: rgb(63, 62, 62);
+    --catalog-border: 1px solid white;
+    --class-card-border: 1px solid #ccc;
+    --class-card-border-radius: 18px;
+    --class-card-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#load-buttons {
+    margin-bottom: 1rem;
+}
+
+#catalog {
+    background-color: var(--catalog-bg-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    border: var(--catalog-border);
+
+    class-card {
+        border: var(--class-card-border);
+        border-radius: var(--class-card-border-radius);
+        margin: 1rem;
+        box-shadow: var(--class-card-box-shadow);
+        text-align: center;
+
+        .class-note {
+            margin: 0.5rem 1rem 1rem 1rem;
+        }
+
+        hgroup {
+            margin-bottom: 1rem;
+
+            h2 {
+                margin-bottom: 0;
+            }
+
+            a {
+                font-size: 0.8rem;
+            }
+        }
+
+        picture {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
 }
 
 ::target-text {
@@ -98,6 +151,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
+    margin: 1rem
 }
 
 header {

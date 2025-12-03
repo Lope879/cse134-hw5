@@ -1,0 +1,9 @@
+{
+    "cse 110": {
+        "field": "cse",
+        "code": 110,
+        "name": "Software Engineering",
+        "image": "https://github.com/Lope879/cse134-hw5/blob/main/assets/images/software-engineering-image.png",
+        "note": "Introduction to software engineering principles and practices."
+    }
+}
