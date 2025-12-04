@@ -71,7 +71,50 @@
                 </div>
             </class-card>
         </div>
+
         <script type="module" src="/javascript/class-component.js"></script>
+        <script>
+            window.addEventListener('DOMContentLoaded', async () => {
+                localStorage.setItem('catalog', await fetch('/json/sampledata.json').then(response => response.text()) );
+            });
+
+            const loadLocalButton = document.getElementById('load-local');
+            const loadRemoteButton = document.getElementById('load-remote');
+            const catalog = document.getElementById('catalog');
+
+            loadLocalButton.addEventListener('click', () => {
+                catalog.innerHTML = ''; 
+                loadLocalData();
+            });
+
+            loadRemoteButton.addEventListener('click', () => {
+                catalog.innerHTML = ''; 
+                loadRemoteData();
+            });
+
+            function loadLocalData() {
+                const data = JSON.parse(localStorage.getItem('catalog'));
+                for (const key in data) {
+                    const classInfo = data[key];
+                    const classCard = document.createElement('class-card');
+                    
+                    classCard.setAttribute("code", classInfo.code);
+                    classCard.setAttribute("field", classInfo.field);
+                    classCard.setAttribute("name", classInfo.name);
+                    classCard.setAttribute("image", classInfo.image);
+                    classCard.setAttribute("note", classInfo.note);
+                    classCard.setAttribute("link", classInfo.link);
+                    catalog.appendChild(classCard);
+                }
+            }
+
+            function loadRemoteData() {
+                const url = "https://api.jsonbin.io/v3/b/6923ce9ad0ea881f40fc1966"; // CHANGE TO YOUR OWN URL
+                let records = {}
+
+
+            }
+        </script>
 
     </main>
 

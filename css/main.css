@@ -4,11 +4,11 @@
     /*--body-background-color: #0D0;*/
     --body-font-family: "Montserrat";
 
-    --bg-color: #0D0;
+    --bg-color: lightgreen;
     --text-color: #222222;
-    --header-bg: #0D0;
+    --header-bg: lightgreen;
     --header-text: #222222;
-    --form-bg: #0D0;
+    --form-bg: lightgreen;
     --form-text: #222222;
     --input-bg: #ffffff;
     --input-text: #222222;
@@ -16,7 +16,7 @@
     --button-text: #ffffff;
     --info-color: gray;
     --error-color: #ff3333;
-    --li-bg: #090;
+    --li-bg: rgb(19, 163, 19);
     --portfolio-button-bg: orange;
     --details-hover-color: orange;
     --link-colors-not-nav: purple;
@@ -192,6 +192,7 @@ header {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
         background-color: var(--li-bg);
+        color: black;
     }
 
     li:hover {
