@@ -3,7 +3,7 @@
         "field": "CSE",
         "code": 110,
         "name": "Software Engineering",
-        "image": "https://github.com/Lope879/cse134-hw5/blob/main/assets/images/software-engineering-image.png",
+        "image": "https://pub-b218e43006be4ff0a0f3097f9dc642f9.r2.dev/images/cse110-software-engineering-image.png",
         "note": "Introduction to software engineering principles and practices. I learned about software development life cycles, project management, and teamwork in software projects. Here I was introduced to the languages in web development such as HTML, CSS, and JavaScript.",
         "link": "https://catalog.ucsd.edu/courses/CSE.html#CSE+110:~:text=CSE%20110.%20Software,as%20space%20permits."
     },
@@ -11,7 +11,7 @@
         "field": "CSE",
         "code": 100,
         "name": "Advanced Data Structures",
-        "image": "https://drive.google.com/file/d/1GFaAOaT-xYTwpYU0lYt7F0q99zLdrFyY/edit",
+        "image": "https://pub-b218e43006be4ff0a0f3097f9dc642f9.r2.dev/images/cse100-advanced-data-structures.png",
         "note": "Building on the topics of CSE12, this course covers the study of advanced data structures such as balanced trees, heaps, and graphs. We learned to calculate running time analysis using Big O notation.",
         "link": "https://catalog.ucsd.edu/courses/CSE.html#CSE+100:~:text=CSE%20100.%20Advanced,as%20space%20permits."
     },
@@ -19,7 +19,7 @@
         "field": "CSE",
         "code": 30,
         "name": "Computer Organization and Systems Programming",
-        "image": "",
+        "image": "https://pub-b218e43006be4ff0a0f3097f9dc642f9.r2.dev/images/cse30-assembly-language.png",
         "note": "This course introduced me to C programming language and low-level computer architecture concepts. I learned about memory management, pointers, and how high-level code translates to machine code.",
         "link": "https://cseweb.ucsd.edu/~ricko/CSE30/"
     },
@@ -27,7 +27,7 @@
         "field": "CSE",
         "code": 12,
         "name": "Basic Data Structures and Object-Oriented Design",
-        "image": "",
+        "image": "https://pub-b218e43006be4ff0a0f3097f9dc642f9.r2.dev/images/cse12-datastructures.png",
         "note": "This course taught me fundamental data structures such as linked lists, stacks, queues, trees, and graphs. I also learned about program analysis to evaluate efficiency of each data structure.",
         "link": "https://catalog.ucsd.edu/courses/CSE.html#CSE+12:~:text=CSE%2012.%20Basic%20Data%20Structures%20and%20Object%2DOriented%20Design"
     },
@@ -35,7 +35,7 @@
         "field": "CSE",
         "code": 15,
         "name": "Software Tools and Techniques Laboratory",
-        "image": "",
+        "image": "https://pub-b218e43006be4ff0a0f3097f9dc642f9.r2.dev/images/cse15L-software-tools.png",
         "note": "This course increased my understanding of the terminal and its tools. I learned to use version control systems like Git, debugging techniques, and modification of files using text editors like Vim.",
         "link": "https://catalog.ucsd.edu/courses/CSE.html#CSE+12:~:text=CSE%2015L.%20Software%20Tools%20and%20Techniques%20Laboratory%20(2)"
     },
@@ -43,7 +43,7 @@
         "field": "CSE",
         "code": 11,
         "name": "Introduction to Programming and Computational Problem-Solving: Accelerated Pace",
-        "image": "",
+        "image": "https://pub-b218e43006be4ff0a0f3097f9dc642f9.r2.dev/images/cse11-programming.webp",
         "note": "This class was my second programming course after learning Python in CSE8A. In this class, I learned how to program using Java, the basics of object-oriented programming.",
         "link": "https://catalog.ucsd.edu/courses/CSE.html#CSE+11:~:text=CSE%2011.%20Introduction%20to%20Programming%20and%20Computational%20Problem%2DSolving%3A%20Accelerated%20Pace"
     },
@@ -51,7 +51,7 @@
         "field": "PSYC",
         "code": 191,
         "name": "Psychology of Sleep",
-        "image": "",
+        "image": "https://pub-b218e43006be4ff0a0f3097f9dc642f9.r2.dev/images/psyc191-sleep-psychology.avif",
         "note": "Important information about sleep cycles, disorders, and the impact of sleep on mental health. I gained a deeper understanding of how sleep affects cognitive functions and emotional well-being.",
         "link": "https://catalog.ucsd.edu/courses/PSYC.html#:~:text=PSYC%20191.%20Psychology%20of%20Sleep"
     },
@@ -59,7 +59,7 @@
         "field": "PSYC",
         "code": 132,
         "name": "Hormones and Behavior",
-        "image": "",
+        "image": "https://pub-b218e43006be4ff0a0f3097f9dc642f9.r2.dev/images/psyc132-hpa-stress-response.webp",
         "note": "I learned about a great amount of hormones affecting our body, each of their names and their specific functions. I learned about which body parts secrete which hormones and how they affect our behavior.",
         "link": "https://catalog.ucsd.edu/courses/PSYC.html#:~:text=PSYC%20132.%20Hormones%20and%20Behavior"
     },
@@ -67,7 +67,7 @@
         "field": "PHYS",
         "code": 5,
         "name": "Stars and Black Holes",
-        "image": "",
+        "image": "https://pub-b218e43006be4ff0a0f3097f9dc642f9.r2.dev/images/phys5-stars-black-holes.avif",
         "note": "A mind opener to the vastness of the universe. It was fascinating to learn about the life cycles of stars and the mysteries surrounding black holes.",
         "link": "https://s3.us-west-2.amazonaws.com/course-syllabi.ucsd.edu/syllabi/FA19/981226.pdf?X-Amz-Expires=86400&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQJOAIALT3422W2MX/20251204/us-west-2/s3/aws4_request&X-Amz-Date=20251204T033819Z&X-Amz-SignedHeaders=host&X-Amz-Signature=488eecea6d887fbad332ebb8853aee65e803f5debcca2aa43eea79d0245a7cd5"
     }

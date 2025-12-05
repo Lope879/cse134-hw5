@@ -55,21 +55,6 @@
         </div>
 
         <div id="catalog">
-            <class-card>
-                <div class="class-card">
-                    <hgroup>
-                        <p>CSE 110</p>
-                        <h2>Software Engineering</h2>
-                        <a href="https://catalog.ucsd.edu/courses/CSE.html#CSE+110:~:text=CSE%20110.%20Software,as%20space%20permits.">Course Info</a>
-                    </hgroup>
-                    <picture>
-                        <source media="(min-width: 500px)" srcset="\assets\images\software-engineering-small.png">
-                        <img src="\assets\images\software-engineering-smaller.png" alt="CSE 110 Class Image">
-                    </picture>
-                    <p class="class-note">This class introduced me to group project management, the languages of web development,
-                        and the software development lifecycle.</p>
-                </div>
-            </class-card>
         </div>
 
         <script type="module" src="/javascript/class-component.js"></script>
@@ -108,11 +93,33 @@
                 }
             }
 
-            function loadRemoteData() {
-                const url = "https://api.jsonbin.io/v3/b/6923ce9ad0ea881f40fc1966"; // CHANGE TO YOUR OWN URL
+            async function loadRemoteData() {
+                const url = "https://api.jsonbin.io/v3/b/69322020d0ea881f40137d1e";
                 let records = {}
 
+                
+                // Attempt to get data from remote resource (I am use fetch in this case)
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`Response status: ${response.status}`);
+                }
 
+                const jsonData = await response.json();
+                // if you use my json server make sure the .record part is removed
+                records = jsonData.record;
+
+                for (const key in records) {
+                    const classInfo = records[key];
+                    const classCard = document.createElement('class-card');
+                    
+                    classCard.setAttribute("code", classInfo.code);
+                    classCard.setAttribute("field", classInfo.field);
+                    classCard.setAttribute("name", classInfo.name);
+                    classCard.setAttribute("image", classInfo.image);
+                    classCard.setAttribute("note", classInfo.note);
+                    classCard.setAttribute("link", classInfo.link);
+                    catalog.appendChild(classCard);
+                }
             }
         </script>
 

@@ -9,7 +9,7 @@ class ClassCard extends HTMLElement {
         const name = this.getAttribute('name') !== "undefined" ? this.getAttribute('name') : 'Unknown name';
         const note = this.getAttribute('note') !== "undefined" ? this.getAttribute('note') : 'Older picture. Nothing to say here!';
         const link = this.getAttribute('link') !== "undefined" ? this.getAttribute('link') : '#';
-        const imageUrl = this.getAttribute('image-url') || '';
+        const imageUrl = this.getAttribute('image') || '';
 
         this.innerHTML = '';
         this.innerHTML += `
