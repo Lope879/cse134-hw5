@@ -102,6 +102,14 @@ card-info {
         box-shadow: var(--class-card-box-shadow);
         text-align: center;
 
+        #delete-card-button {
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+
         form {
             background-color: var(--catalog-bg-color);
         }

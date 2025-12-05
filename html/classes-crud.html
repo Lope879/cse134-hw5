@@ -56,7 +56,7 @@
         </div>
         <card-info>
             <img src="\assets\images\info-icon.png" alt="Information Icon">
-            <p>Edit only works on locally loaded components. To edit a card, click on class title or image.</p>
+            <p>Edit only works on cards loaded locally. To edit/delete a card, click on class title or image.</p>
         </card-info>
 
         <div id="catalog">
@@ -171,8 +171,18 @@
                                 <label for='note'>Note:</label>
                                 <textarea name='note' rows='5' required>${note.textContent}</textarea> <br>
                                 <button type="submit">Save</button>
+                                <button type="button" id="delete-card-button">Delete Card</button>
                             </form>
                         `;
+
+                        const deleteButton = target.querySelector('#delete-card-button');
+                        deleteButton.addEventListener('click', () => {
+                            const myKey = target.querySelector('.field').innerText.split(' ').join('');
+                            delete records[myKey];
+                            localStorage.setItem("catalog", JSON.stringify(records));
+                            target.remove();
+                        });
+
                         const form = target.querySelector('.edit-deets-form');
                         form.addEventListener('submit', async (e) => {
 
