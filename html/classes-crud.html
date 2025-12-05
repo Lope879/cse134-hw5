@@ -52,6 +52,7 @@
         <div id="load-buttons">
             <button id="load-local">Load Local</button>
             <button id="load-remote">Load Remote</button>
+            <button id="create-card">Create Card</button>
         </div>
         <card-info>
             <img src="\assets\images\info-icon.png" alt="Information Icon">
@@ -69,12 +70,15 @@
                 records = JSON.parse(localStorage.getItem('catalog'));
             });
 
+            const createCardButton = document.getElementById('create-card');
             const loadLocalButton = document.getElementById('load-local');
             const loadRemoteButton = document.getElementById('load-remote');
             const catalog = document.getElementById('catalog');
 
+            // Updates to class cards on click
             catalog.addEventListener('click', (event) => {
                 let target = event.target.closest('class-card');
+                records = JSON.parse(localStorage.getItem('catalog'));
                 if (target) {
                     if (event.target.tagName === 'H2') {
                         const hgroupTag = target.querySelector('hgroup');
@@ -188,6 +192,36 @@
                         });
                     } 
                 }
+            });
+
+            createCardButton.addEventListener('click', () => {
+                records = JSON.parse(localStorage.getItem('catalog'));
+                if (records['NewClass000']) {
+                    alert("You have already created a new class card. Please edit the existing one before creating another.");
+                    return;
+                }
+
+                const classCard = document.createElement('class-card');
+                
+                classCard.setAttribute("code", "000");
+                classCard.setAttribute("field", "NewClass");
+                classCard.setAttribute("name", "New Class Name");
+                classCard.setAttribute("image", "https://pub-b218e43006be4ff0a0f3097f9dc642f9.r2.dev/images/placeholder-image.png");
+                classCard.setAttribute("note", "This is a newly created class card. Click on the title or image to edit.");
+                classCard.setAttribute("link", "https://example.com");
+                catalog.appendChild(classCard);
+                const myKey = "NewClass000";
+                const data = JSON.parse(localStorage.getItem('catalog'));
+                data[myKey] = {
+                    code: "000",
+                    field: "NewClass",
+                    name: "New Class Name",
+                    image: "https://pub-b218e43006be4ff0a0f3097f9dc642f9.r2.dev/images/placeholder-image.png",
+                    alt: "Placeholder Image",
+                    note: "This is a newly created class card. Click on the title or image to edit.",
+                    link: "https://example.com"
+                };
+                localStorage.setItem('catalog', JSON.stringify(data));
             });
 
             loadLocalButton.addEventListener('click', () => {
