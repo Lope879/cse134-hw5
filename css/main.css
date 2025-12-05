@@ -59,6 +59,33 @@ body.dark {
 
 #load-buttons {
     margin-bottom: 1rem;
+
+    img {
+        max-width: 2rem;
+        height: auto;
+    }
+}
+
+card-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    background-color: var(--catalog-bg-color);
+    border: var(--catalog-border);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+
+    img {
+        max-width: 1.5rem;
+        height: auto;
+        margin-right: 0.5rem;
+    }
+
+    p {
+        margin: 0;
+        color: var(--card-p-font-color);
+        font-size: 0.8rem;
+    }
 }
 
 #catalog {
@@ -74,6 +101,10 @@ body.dark {
         margin: 1rem;
         box-shadow: var(--class-card-box-shadow);
         text-align: center;
+
+        form {
+            background-color: var(--catalog-bg-color);
+        }
 
         p {
             color: var(--card-p-font-color);
@@ -97,8 +128,8 @@ body.dark {
 
         picture {
             img {
-                width: 100%;
-                height: auto;
+                width: auto;
+                max-height: 12vw;
             }
         }
     }

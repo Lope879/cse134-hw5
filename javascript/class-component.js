@@ -15,7 +15,7 @@ class ClassCard extends HTMLElement {
         this.innerHTML += `
             <div class="class-card">
                     <hgroup>
-                        <p>${field} ${code}</p>
+                        <p class="field">${field} ${code}</p>
                         <h2>${name}</h2>
                         <a href="${link}">Course Info</a>
                     </hgroup>
