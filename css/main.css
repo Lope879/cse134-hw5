@@ -28,6 +28,8 @@
     --class-card-border-radius: 18px;
     --class-card-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
     --card-p-font-color: black;
+    --instructions-font-color: #222222;
+    --instructions-bg-color: rgb(171, 117, 19);;
 }
 
 body.dark {
@@ -55,6 +57,98 @@ body.dark {
     --class-card-border-radius: 18px;
     --class-card-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
     --card-p-font-color: white;
+    --instructions-font-color: #e0e0e0;
+    --instructions-bg-color: #222222;
+}
+
+.desktop { 
+    display: block; 
+    justify-self: center;
+}
+.mobile { 
+    display: none;
+    justify-self: center;
+}
+
+@media (max-width: 650px) {
+  .desktop { display: none }
+  .mobile { display: block }
+}
+
+dialog {
+  border: none;
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 420px;
+  width: 90%;
+  background: #ffffff;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+  text-align: center;
+
+    #plantImage {
+        max-width: 240px;    
+        max-height: 240px;
+        object-fit: contain;
+        margin: 1rem auto;
+        display: block;
+        border-radius: 18px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    #plantName {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+    }
+
+    #plantSpecie {
+        font-size: 1rem;
+        font-weight: normal;
+        color: #555;
+        margin-bottom: 0.6rem;
+    }
+
+    #plantStatus {
+        display: inline-block;
+        padding: 0.2rem 0.6rem;
+        border-radius: 20px;
+        background: #e6f5e6;
+        color: #2e7d32;
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Description */
+    #plantNote {
+    font-size: 0.9rem;
+    color: #444;
+    }
+
+    /* Close button */
+    button {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    }
+
+    button:hover {
+    background: #256628;
+    }
+}
+
+dialog::backdrop {
+  background: rgba(0,0,0,0.8);
+}
+
+#plantsInstructions {
+    font-size: 1.2rem;
+    color: var(--instructions-font-color);
+    margin-bottom: 1rem;
+    justify-self: center;
+    background-color: var(--instructions-bg-color);
 }
 
 #load-buttons {
@@ -343,12 +437,6 @@ progress {
 #pic110 {
     width: 100%;
     height: auto;
-}
-
-#plantsImg {
-    width: 25%;
-    height: auto;
-    transform: scale(80%) rotate(15deg) translate(30px, -30px);
 }
 
 @keyframes SvgAnimation {

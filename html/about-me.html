@@ -44,11 +44,81 @@
                     my friends in Discord to <em>exercise together</em>.</p>
             </div>
             <p>I like to take care of potted plants and to learn how to prevent them from dying.</p>
-            <picture>
-                <source>
-                <img id="plantsImg" src="\assets\images\succulentPlants.jpg" alt="Several succulent plants">
+            <p id="plantsInstructions">Click on the plants in the image below to learn more about them!</p>
+            <picture class="desktop">
+                <img src="\assets\images\succulentPlantsBig.jpg" alt="Several potted plants" usemap="#desktop-map">
             </picture>
-            <div>
+            <picture class="mobile">
+                <img src="\assets\images\succulentPlantsSmall.jpg" alt="Several potted plants" usemap="#mobile-map">
+            </picture>
+            <map name="desktop-map">
+                <area alt="lucky" title="lucky" coords="30,170,171,570" shape="rect" onclick="displayModal('lucky')">
+                <area alt="toro" title="toro" coords="203,648,82" shape="circle" onclick="displayModal('toro')">
+                <area alt="pinol" title="pinol" coords="311,542,64" shape="circle" onclick="displayModal('pinol')">
+                <area alt="squidy" title="squidy" coords="443,669,98" shape="circle" onclick="displayModal('squidy')">
+                <area alt="mencia" title="mencia" coords="512,495,87" shape="circle" onclick="displayModal('mencia')">
+            </map>
+            <map name="mobile-map">
+                <area alt="lucky" title="lucky" coords="13,82,89,285" shape="rect" onclick="displayModal('lucky')">
+                <area alt="toro" title="toro" coords="99,324,39" shape="circle" onclick="displayModal('toro')">
+                <area alt="pinol" title="pinol" coords="154,269,33" shape="circle" onclick="displayModal('pinol')">
+                <area alt="squidy" title="squidy" coords="221,336,48" shape="circle" onclick="displayModal('squidy')">
+                <area alt="mencia" title="mencia" coords="255,246,47" shape="circle" onclick="displayModal('mencia')">
+            </map>
+
+            <script>
+                const PLANT_DATA = {
+                    lucky: {
+                        name: "Lucky",
+                        specie: "Lucky Bamboo",
+                        note: "Bought from Costco. Supposed to bring good luck!",
+                        status: "Thriving, leaves are green and healthy.",
+                        image: "https://pub-b218e43006be4ff0a0f3097f9dc642f9.r2.dev/images/luckyImage.jpeg"
+                    },
+                    toro: {
+                        name: "Toro",
+                        specie: "Panda Plant",
+                        note: "From school well-being event. Named after the pot art I had predone.",
+                        status: "Thriving, adopted a weird shape after repotting.",
+                        image: "https://pub-b218e43006be4ff0a0f3097f9dc642f9.r2.dev/images/toroImage.jpeg"
+                    },
+                    pinol: {
+                        name: "Pinol",
+                        specie: "Jade Plant",
+                        note: "From school well-being event. Named after its shape, looks like a pine tree.",
+                        status: "Thriving, grows super tall and needs support.",
+                        image: "https://pub-b218e43006be4ff0a0f3097f9dc642f9.r2.dev/images/pinolImage.jpeg"
+                    },
+                    squidy: {
+                        name: "Squidy",
+                        specie: "Zebra Plant",
+                        note: "My first ever plant! Named after tentacles-like leaves.",
+                        status: "Surviving, leaves seem darker and less sturdy.",
+                        image: "https://pub-b218e43006be4ff0a0f3097f9dc642f9.r2.dev/images/squidyImage.jpeg"
+                    },
+                    mencia: {
+                        name: "Mencia",
+                        specie: "Mint",
+                        note: "Least-resilient plant. Obtained the same day I met the people from my social club in college.",
+                        status: "Deceased, did not survive the season.",
+                        image: "https://pub-b218e43006be4ff0a0f3097f9dc642f9.r2.dev/images/menciaImage.jpeg"
+                    }
+                };
+                
+                function displayModal(key) {
+                    const plant = PLANT_DATA[key];
+
+                    document.getElementById("plantImage").src = plant.image;
+                    document.getElementById("plantSpecie").textContent = plant.specie;
+                    document.getElementById("plantStatus").textContent = plant.status;
+                    document.getElementById("plantNote").textContent = plant.note;
+                    document.getElementById("plantName").textContent = plant.name;
+
+                    document.getElementById("plantModal").showModal();
+                }
+            </script>
+
+            <div>  
                 <p>I am fascinated by philosophical phrases, in specific, Stoicism.</p>
                 <p>"<i>The happiness of your life depends upon the quality of your thoughts</i>." — Marcus Aurelius</p>
             </div>
@@ -62,6 +132,16 @@
                 <li>I like to try new things.</li>
             </ul>
         </article>
+
+        <!-- Dialog for Plant Popup After Clicking on a Plant -->
+        <dialog id="plantModal" >
+            <h2 id="plantName"></h2>
+            <h3 id="plantSpecie"></h3>
+            <p id="plantStatus"></p>
+            <img id="plantImage" src="" alt="Plant Image">
+            <p id="plantNote"></p>
+            <button onclick="plantModal.close()">Close</button>
+        </dialog>
     </main>
     <footer>
         <button id="theme-toggle">🌙 Dark Mode</button> 
